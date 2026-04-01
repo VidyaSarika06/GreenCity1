@@ -21,7 +21,7 @@
   </properties>
 
   <dependencies>
-    <!-- Spring Boot starters (no versions needed when using the parent) -->
+    
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
@@ -39,14 +39,14 @@
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
 
-    <!-- Use MySQL or Postgres (pick one). For your DB.sql, it’s MySQL: -->
+    
     <dependency>
       <groupId>com.mysql</groupId>
       <artifactId>mysql-connector-j</artifactId>
       <scope>runtime</scope>
     </dependency>
 
-    <!-- JWT -->
+ 
     <dependency>
       <groupId>io.jsonwebtoken</groupId>
       <artifactId>jjwt-api</artifactId>

@@ -1,7 +1,11 @@
 package com.greencity.identity.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import java.time.Instant;
+import java.time.LocalDateTime;
+
+
 
 @Entity
 @Table(name = "User")
@@ -26,21 +30,24 @@ public class User {
     private String phone;
 
     @Column(name = "PasswordHash", length = 255)
+    @JsonIgnore
     private String passwordHash;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "Status", nullable = false, length = 20)
     private UserStatus status;
 
-    @Column(name = "CreatedAt", nullable = false)
+   
+    
+    @Column(name = "CreatedAt", insertable = false, updatable = false)
     private Instant createdAt;
 
-    @Column(name = "UpdatedAt", nullable = false)
+    @Column(name = "UpdatedAt", insertable = false, updatable = false)
     private Instant updatedAt;
 
-    // --------------------------------------------
+
     // GETTERS
-    // --------------------------------------------
+
 
     public Long getId() {
         return id;
@@ -78,9 +85,7 @@ public class User {
         return updatedAt;
     }
 
-    // --------------------------------------------
     // SETTERS
-    // --------------------------------------------
 
     public void setId(Long id) {
         this.id = id;
