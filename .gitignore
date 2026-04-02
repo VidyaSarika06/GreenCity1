@@ -1,0 +1,15 @@
+#Build files
+target/
+bin/
+*.class
+*.jar
+*.war
+
+#IDE files
+.vscode/
+.settings/
+.project
+.classpath
+
+*.log
+.DS_Store

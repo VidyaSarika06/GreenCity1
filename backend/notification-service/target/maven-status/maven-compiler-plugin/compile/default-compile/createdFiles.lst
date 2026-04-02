@@ -1,6 +1,0 @@
-com\greencity\notification\api\NotificationController.class
-com\greencity\notification\domain\Notification.class
-com\greencity\notification\app\NotificationService.class
-com\greencity\notification\NotificationServiceApplication.class
-com\greencity\notification\infra\NotificationRepository.class
-com\greencity\notification\dto\NotificationResponse.class
