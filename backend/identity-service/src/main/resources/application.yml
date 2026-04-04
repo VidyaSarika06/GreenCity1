@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/greencity?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.physical_naming_strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      hibernate.format_sql: true
+
+  flyway:
+    enabled: false
+
+server:
+  port: 8081
+
+app:                    
+  jwt:
+    secret: "THIS_IS_A_very_LONG_Secret_Key_1234567890_JWT_KEY"
+    issuer: greencity-identity
+    expirationMinutes: 120
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: TRACE
+    org.springframework.web: INFO
+    org.springframework.security: DEBUG
